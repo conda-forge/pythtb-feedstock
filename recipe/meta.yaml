@@ -1,5 +1,5 @@
 {% set name = "pythtb" %}
-{% set version = "1.8.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pythtb-{{ version }}.tar.gz
-  sha256: 1881996ebfd12c6ff0d30f0e30e3af3310aea3e50355d8f29e81695e4e5968d8
+  sha256: fd9ccd76a38427777fbb825ab21acaf65ce17f34402569a7287062ca375d7cff
 
 build:
   noarch: python
@@ -16,13 +16,14 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python >=3.12
     - pip
     - setuptools
+    - setuptools_scm
   run:
-    - python >={{ python_min }}
-    - numpy
-    - matplotlib-base
+    - python >=3.12
+    - numpy >=2.0
+    - matplotlib-base >=3.9
 
 test:
   imports:
@@ -30,14 +31,16 @@ test:
   commands:
     - pip check
   requires:
-    - python {{ python_min }}
+    - python
     - pip
 
 about:
-  home: http://www.physics.rutgers.edu/pythtb
-  summary: Simple solver for tight binding models for use in condensed matter physics and materials science.
-  license: GPL-3.0-only
-  license_file: gpl-3.0.txt
+  home: https://github.com/pythtb/pythtb
+  dev_url: https://github.com/pythtb/pythtb
+  doc_url: https://pythtb.readthedocs.io/en/latest/
+  summary: Library for constructing and analyzing tight-binding models in condensed matter physics and materials science.
+  license: GPL-3.0-or-later
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
