@@ -3,11 +3,15 @@ About pythtb-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pythtb-feedstock/blob/main/LICENSE.txt)
 
-Home: http://www.physics.rutgers.edu/pythtb
+Home: https://github.com/pythtb/pythtb
 
-Package license: GPL-3.0-only
+Package license: GPL-3.0-or-later
 
-Summary: Simple solver for tight binding models for use in condensed matter physics and materials science.
+Summary: Library for constructing and analyzing tight-binding models in condensed matter physics and materials science.
+
+Development: https://github.com/pythtb/pythtb
+
+Documentation: https://pythtb.readthedocs.io/en/latest/
 
 Current build status
 ====================
@@ -98,12 +102,12 @@ it is possible to build and upload installable packages to the
 [conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
-To manage the continuous integration and simplify feedstock maintenance
+To manage the continuous integration and simplify feedstock maintenance,
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
-For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
+For more information, please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
@@ -130,7 +134,7 @@ merged, the recipe will be re-built and uploaded automatically to the
 everybody to install and use from the `conda-forge` channel.
 Note that all branches in the conda-forge/pythtb-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
-on branches in forks and branches in the main repository should only be used to
+on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
