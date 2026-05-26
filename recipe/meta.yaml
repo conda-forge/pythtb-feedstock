@@ -1,5 +1,5 @@
 {% set name = "pythtb" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pythtb-{{ version }}.tar.gz
-  sha256: fd9ccd76a38427777fbb825ab21acaf65ce17f34402569a7287062ca375d7cff
+  sha256: f4577a54fa81cf308550dd3df211643ddb64f1c4b1f622ed8fc5cc70ebdae1c6
 
 build:
   noarch: python
